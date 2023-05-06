@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.kinetic{
+    position: relative;
+    height: 100px;
+    width: 100px;
+}
+
+.kinetic::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; /* 取消内容的高宽 */
+    height: 0; /* 取消内容的高宽 */
+    border: 50px solid transparent;
+    border-bottom-color: rgb(80, 191, 239);
+    animation: rotateA 2s linear infinite 0.5s;
+    /*       动画名称 动画时长 动画运动速度 执行次数 延迟时间 */
+}
+.kinetic::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; /* 取消内容的高宽 */
+    height: 0; /* 取消内容的高宽 */
+    border: 50px solid transparent;
+    border-bottom-color: blueviolet;
+    transform: rotate(90deg); /* 初始状态 */
+    animation: rotateB 2s linear infinite;
+    /*       动画名称 动画时长 动画运动速度 执行次数  */
+}
+
+@keyframes rotateA{
+    /* 0+0.5s - 0.5+0.5s停在0度 */
+    0%,
+    25%{
+        transform: rotate(0deg);
+    }
+    /* 0.5+0.5s-1+0.5s在旋转 */
+    /* 1+0.5s-1.5+0.5s停在180度 */
+    50%,
+    75%{
+        transform: rotate(180deg);
+    }
+    /* 1.5+0.5s-2+0.5s在旋转 */
+    /* 2+0.5s停在360度 */
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateB{
+    /* 0s-0.5s停在90度 */
+    0%,
+    25%{
+        transform: rotate(90deg);
+    }
+    /* 0.5s-1s在旋转 */
+    /* 1s-1.5s停在180度 */
+    50%,
+    75%{
+        transform: rotate(270deg);
+    }
+    /* 1.5s-2s在旋转 */
+    /* 2s停在360度 */
+    100%{
+        transform: rotate(450deg);
+    }
+}
