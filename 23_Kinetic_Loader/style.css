@@ -26,7 +26,7 @@ body{
     width: 0; /* 取消内容的高宽 */
     height: 0; /* 取消内容的高宽 */
     border: 50px solid transparent;
-    border-bottom-color: rgb(80, 191, 239);
+    border-bottom-color: rgb(80, 191, 239); /*三角形效果*/
     animation: rotateA 2s linear infinite 0.5s;
     /*       动画名称 动画时长 动画运动速度 执行次数 延迟时间 */
 }
@@ -38,7 +38,7 @@ body{
     width: 0; /* 取消内容的高宽 */
     height: 0; /* 取消内容的高宽 */
     border: 50px solid transparent;
-    border-bottom-color: blueviolet;
+    border-bottom-color: blueviolet;/*三角形效果*/
     transform: rotate(90deg); /* 初始状态 */
     animation: rotateB 2s linear infinite;
     /*       动画名称 动画时长 动画运动速度 执行次数  */
