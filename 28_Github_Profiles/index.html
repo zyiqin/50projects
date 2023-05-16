@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <form class="user-form" id="form">
+        <input type="text" id="search" placeholder="search a github user">
+    </form>
+
+    <main id="main"></main>
+    <!-- 
+    ---------------------------integrity属性----------------------------------
+    安全验证,用来验证文件完整性
+    integrity属性设置引入js文件的hash值，浏览器在下载js文件时候，会对js文件进行hash计算，如果一致则正常加载，否则拒绝加载运行。
+    ---------------------------crossorigin属性-------------------------------
+    没有添加crossorigin属性的情况下，如果axios.min.js中抛出了错误，在页面中通过onerror事件是捕获不到具体错误信息的 ，只会捕获到Script error错误。加载了具有crossorigin属性的跨域js脚本，就可以获取到具体错误信息了。
+    anonymous	对此元素的 CORS 请求将不设置凭据标志。
+     -->
+
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
+     <script src="script.js"></script>
+</body>
+</html>
